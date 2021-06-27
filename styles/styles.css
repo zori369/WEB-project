@@ -74,6 +74,9 @@ footer{
 	width: 600px;
 	background-color: #ffffff;
 	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .SVG__creator{
@@ -98,10 +101,29 @@ footer{
 	padding: 10px 0;
 }
 
-.add{
+.upload_btn{
 	font-size: 22px;
 	background-color: #292828;
 	border: 3px solid #d65032;
 	color: #d65032;
 	padding: 10px;
+}
+
+.choose_btn {
+	font-size: 22px;
+	background-color: #292828;
+	border: 3px solid #d65032;
+	color: #d65032;
+	padding: 10px;
+}
+
+.choose_input {	
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.error {
+	color: #d65032;
 }
