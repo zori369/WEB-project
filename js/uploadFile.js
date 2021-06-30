@@ -48,3 +48,19 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+var slide = document.getElementById("x");
+var outpu = document.getElementById("demo1");
+outpu.innerHTML = slide.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slide.oninput = function() {
+  outpu.innerHTML = this.value;
+}
+var slid = document.getElementById("y");
+var outp = document.getElementById("demo2");
+outp.innerHTML = slid.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slid.oninput = function() {
+  outp.innerHTML = this.value;
+}
