@@ -61,6 +61,11 @@ footer{
 	color: #d65032;
 	display: flex;
 	align-items: center;
+	margin-right: 40px;
+}
+
+.navigation__links:nth-child(3){
+	margin-right: 40px;
 }
 
 .footer__text{
@@ -99,6 +104,13 @@ footer{
 	color: white;
 	width: 130px;
 	padding: 10px 0;
+}
+.add{
+	font-size: 22px;
+	background-color: #292828;
+	border: 3px solid #d65032;
+	color: #d65032;
+	padding: 10px;
 }
 
 .upload_btn{
