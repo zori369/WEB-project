@@ -20,17 +20,11 @@
 				<div class="SVG__creator">
 					<div class="column">
 						<div class="canvas" id="edit_canvas">
-							<svg class="mobile">
-								<use xlink:href="images/svg-sprite.svg#example_icon" />
-							</svg>
-							
+
 						</div>
-						<form class="form" id="svg_uplaod_form">
-
-							<input type="file" class="choose_input" id="input_file">
-							<label for="input_file" class="choose_btn">Choose file</label> 
-
-							<button class="upload_btn" type="submit">Upload file</button>
+						<form class="form" id="svg_upload_form">
+							<input type="file" id="actual-btn" hidden accept=".svg" />
+							<label for="actual-btn" class="add">Upload Files</label>
 						</form>				
 					</div>
 					<div class="buttons">
