@@ -2,7 +2,7 @@ const uploadForm=document.getElementById("svg_upload_form");
 const inputFile = document.getElementById("actual-btn")
 
 //Upload and place file in the editor
-uploadForm.addEventListener("submit", e => {
+uploadForm.addEventListener("input", e => {
     e.preventDefault();
 
     const endpoint = "src/get-file-content.php";
@@ -27,3 +27,24 @@ uploadForm.addEventListener("submit", e => {
 
 });
 
+function displayButton(){
+    const buttons = document.getElementsByClassName("buttons__element");
+    for (var k = 0; k<buttons.length; k++){
+        var b = buttons[k];
+        buttons[k].addEventListener('click', function(e) {
+            console.log(e);
+            buttons[k].nextElementSibling.classList.toggle("has-flag");
+        })
+    }
+}
+
+displayButton();
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
