@@ -2,7 +2,7 @@ const uploadForm=document.getElementById("svg_upload_form");
 const inputFile = document.getElementById("actual-btn")
 
 //Upload and place file in the editor
-uploadForm.addEventListener("submit", e => {
+uploadForm.addEventListener("input", e => {
     e.preventDefault();
 
     const endpoint = "src/get-file-content.php";
@@ -19,7 +19,7 @@ uploadForm.addEventListener("submit", e => {
             if(response.ok) {
                 response.text().then(function (text) {
                     let svgContent = text;
-                document.getElementById("edit_canvas").innerHTML = svgContent;
+                canvas.innerHTML = svgContent;
                 console.log('file uploaded: ' + text);
                   });
         }
