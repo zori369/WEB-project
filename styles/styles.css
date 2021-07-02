@@ -237,6 +237,7 @@ footer{
   cursor: pointer; /* Cursor on hover */
 }
 
+<<<<<<< HEAD
 
 /* modal styles */
 
@@ -411,3 +412,21 @@ footer{
   /* ROTATE SELECTOR END*/
 
 
+=======
+/*---------- Galery ----------*/
+.Galery_display{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.Galery_element{
+	flex-basis: 30%;
+	height: 150px;
+	background-color: white;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+.Galery_element:nth-child(3n){
+	margin-right: 0;
+}
+>>>>>>> 0a4526b00519dc64b17fb121d0114dfb70f1d5e5
