@@ -20,14 +20,13 @@ uploadForm.addEventListener("input", e => {
                 response.text().then(function (text) {
                     let svgContent = text;
                 canvas.innerHTML = svgContent;
-                console.log('file uploaded: ' + text);
                   });
         }
     }).catch(console.error);
 
 });
 
-function displayButton(){
+/*function displayButton(){
     const buttons = document.getElementsByClassName("buttons__element");
     for (var k = 0; k<buttons.length; k++){
         var b = buttons[k];
@@ -38,11 +37,11 @@ function displayButton(){
     }
 }
 
-displayButton();
+displayButton();*/
 
-var slider = document.getElementById("myRange");
+var slider = document.getElementById("rotate_slider");
 var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
+output.innerHTML = slider.innerHTML; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {

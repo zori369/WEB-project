@@ -11,9 +11,9 @@
 				<img class="header__logo" src="images/logo.png">
 				<nav class="header__navigation">
 					<a class="navigation__links" href="">New</a>
-					<a class="navigation__links" id="download_btn" href="">Download <img class="download" src="images/arrow.svg"></a>
-					<a class="navigation__links" href="file:///C:/Users/zornica%20dimova/Desktop/fn62266_exam_draft1.zip/galery.html">Galery</a>
-					<a class="navigation__links" href="">Save</a>
+					<a class="navigation__links" id="download_btn" >Download <img class="download" src="images/arrow.svg"></a>
+					<a class="navigation__links" href="galery.html">Galery</a>
+					<a class="navigation__links"  id="save_btn">Save</a>
 				</nav>
 			</header>
 			<main>
@@ -21,56 +21,75 @@
 					<div class="column">
 						<div class="canvas" id="edit_canvas">
 						</div>
-						<form class="form" id="svg_upload_form">
+						<form class="form" id="svg_upload_form" enctype="multipart/form-data">
 							<input type="file" id="actual-btn" hidden accept=".svg" />
 							<label for="actual-btn" class="add">Upload Files</label>
 						</form>				
 					</div>
 					<div class="buttons">
 						<div class="button_block">
-							<div class="buttons__element">Time</div>
-							<div class="buttons__element-hidden time">
+							<button class="buttons__element" id="general_btn">General</button>
+							<!-- <div class="buttons__element-hidden time">
 								<label for="time">Time (in seconds):</label>
 								<input type="number" id="time" name="time" min="0" max="5">
-							</div>
+							</div> -->
+
+							<div id="general_modal" class="general_modal">
+								<div class="general_modal_content">
+								  <span class="general_close" id="general_close">&times;</span>
+								  <h3>General Settings</h3>
+								  <label for="time">Animation duration:</label>
+								  <input type="number" id="duration" name="time" min="0" max="5">
+								</div>					  
+							  </div>
 						</div>
 						<div class="button_block">
-							<div class="buttons__element">Rotate</div>
-							<div class="buttons__element-hidden rotate">
-								<div class="slidecontainer">
-  									<input type="range" min="0" max="360" value="180" class="slider" id="myRange">
-  									<p id="demo">0</p>
+							<button class="buttons__element" id="rotate_btn">Rotate</button>
+
+							<div id="rotate_modal" class="rotate_modal">
+								<div class="rotate_modal_content">
+								  <span class="rotate_close" id="rotate_close">&times;</span>
+								  <h3>Rotate Settings</h3>
+								  <div class="buttons__element-hidden rotate" id="rotate_menu">
+									<button id="add_rotate_selector_btn">Add selector</button>
 								</div>
+							</div>	  
 							</div>
+
 						</div>
+
 						<div class="button_block">
-							<div class="buttons__element">Skew</div>
-							<div class="buttons__element-hidden">
-								<div class="slidecontainer">
-  									<input type="range" min="0" max="360" value="180" class="slider" id="x">
-  									<p id="demo1">0</p>
+							<button class="buttons__element" id="skew_btn">Skew</button>
+							
+
+							<div id="skew_modal" class="skew_modal">
+
+								<!-- Modal content -->
+								<div class="skew_modal_content">
+								  <span class="skew_close" id="skew_close">&times;</span>
+								  <h3>Skew settings</h3>
+								  <div class="buttons__element-hidden" id="skew_menu">
+									<button id="add_skew_selector_btn">Add selector</button>
 								</div>
-								<div class="slidecontainer">
-  									<input type="range" min="0" max="360" value="180" class="slider" id="y">
-  									<p id="demo2">0</p>
+							  
+							  </div>
+						</div>
+						<div class="button_block">
+							<button class="buttons__element" id="translate_btn">Translate</button>
+
+							<div id="translate_modal" class="translate_modal">
+
+								<div class="translate_modal_content">
+								  <span class="translate_close" id="translate_close">&times;</span>
+								  <h3>Translate Settings</h3>
+								  <div class="buttons__element-hidden" id="translate_menu">
+									<button id="add_translate_selector_btn">Add selector</button>
 								</div>
-							</div>
+								</div>
+							  
+							  </div>
 						</div>
-						<div class="button_block">
-							<div class="buttons__element">Translate</div>
-							<div class="buttons__element-hidden">
-								<label for="X">TranslateX:</label>
-								<input type="number" id="X" name="X">
-								<label for="Y">TranslateY:</label>
-								<input type="number" id="Y" name="Y">
-							</div>
-						</div>
-						<div class="button_block">
-							<div class="buttons__element">Color</div>
-							<div class="buttons__element-hidden">
-								<input type="color" name="chosecolor" value="#292828">
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</main>
@@ -83,6 +102,9 @@
 
 		<script src="js/uploadFile.js"></script>
 		<script src="js/downloadSVG.js"></script>
+		<script src="js/animateSVG.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/coreService.js"></script>
 
 	</body>
 </html>
