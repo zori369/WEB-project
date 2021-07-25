@@ -28,7 +28,7 @@
 					</div>
 					<div class="buttons">
 						<div class="button_block">
-							<button class="buttons__element" id="general_btn">General</button>
+							<button onclick="changeMeGeneral()" class="buttons__element" id="general_btn">General</button>
 							<!-- <div class="buttons__element-hidden time">
 								<label for="time">Time (in seconds):</label>
 								<input type="number" id="time" name="time" min="0" max="5">
@@ -60,34 +60,29 @@
 
 						<div class="button_block">
 							<button class="buttons__element" id="skew_btn">Skew</button>
-							
-
 							<div id="skew_modal" class="skew_modal">
-
 								<!-- Modal content -->
 								<div class="skew_modal_content">
-								  <span class="skew_close" id="skew_close">&times;</span>
-								  <h3>Skew settings</h3>
-								  <div class="buttons__element-hidden" id="skew_menu">
-									<button id="add_skew_selector_btn">Add selector</button>
+									<span class="skew_close" id="skew_close">&times;</span>
+									<h3>Skew settings</h3>
+									<div class="buttons__element-hidden" id="skew_menu">
+										<button id="add_skew_selector_btn">Add selector</button>
+									</div>
 								</div>
-							  
-							  </div>
+							</div>
 						</div>
 						<div class="button_block">
 							<button class="buttons__element" id="translate_btn">Translate</button>
-
 							<div id="translate_modal" class="translate_modal">
-
 								<div class="translate_modal_content">
-								  <span class="translate_close" id="translate_close">&times;</span>
-								  <h3>Translate Settings</h3>
-								  <div class="buttons__element-hidden" id="translate_menu">
-									<button id="add_translate_selector_btn">Add selector</button>
-								</div>
+									<span class="translate_close" id="translate_close">&times;</span>
+									<h3>Translate Settings</h3>
+								 	<div class="buttons__element-hidden" id="translate_menu">
+										<button id="add_translate_selector_btn">Add selector</button>
+									</div>
 								</div>
 							  
-							  </div>
+							</div>
 						</div>
 						
 					</div>
@@ -105,6 +100,6 @@
 		<script src="js/animateSVG.js"></script>
 		<script src="js/utils.js"></script>
 		<script src="js/coreService.js"></script>
-
+		<script src="js/buttonsBeauty.js"></script>
 	</body>
 </html>

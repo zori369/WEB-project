@@ -108,18 +108,19 @@ footer{
 	padding: 10px 15px;
 	display: flex;
     justify-content: space-between;
+    transition: 0.5s;
 }
 .buttons__element.has-flag{
-	border-bottom: none;
 	background-color: white;
 	color: #d65032;
+	transition: 0.5s;
 }
-.buttons__element::after{
+.button_block:first-child>.buttons__element::after{
 	content: '\25BC';
 	color: white;
 	display: block;
 }
-.buttons__element.has-flag::after{
+.button_block:first-child>.buttons__element.has-flag::after{
 	content: '\25B2';
 	color: #d65032;
 }
@@ -209,7 +210,7 @@ footer{
   background: #292828; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  -webkit-transition: .2s; /* 0.5 seconds transition on hover */
   transition: opacity .2s;
   border-radius: 20%;
 }
@@ -430,3 +431,97 @@ footer{
 	margin-right: 0;
 }
 >>>>>>> 0a4526b00519dc64b17fb121d0114dfb70f1d5e5
+
+
+/*Fixes*/
+.button_block{
+	position: relative !important;
+}
+.button_block{
+	position: relative;
+}
+#general_modal{
+	position: absolute;
+	top:40px;
+	opacity: 0 !important;
+	transition: 0.5s;
+}
+#general_modal>.general_modal_content{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 170px;
+	border: 2px solid #d65032;
+	height: 210px;
+	padding: 10px;
+}
+#general_modal.has-flag{
+	opacity: 100 !important;
+	transition: 0.5s;
+	z-index: 30;
+}
+#general_modal>.general_modal_content>span{
+	display: none;
+}
+.general_modal_content>h3{
+	font-weight: 900;
+	border-bottom: 2px solid #d65032;
+	padding-bottom: 10px;
+}
+.general_modal_content>input{
+	width: 100px;
+	margin-top: 20px;
+	border: 2px solid #d65032;
+	border-radius: 45px;
+	padding: 5px 10px;
+}
+.general_modal_content>input:focus-visible{
+	outline: none;
+	background-color: gray;	
+}
+.rotate_modal_content, .skew_modal_content, .translate_modal_content{
+	margin-top: 150px;
+	width: 630px;
+	border:5px solid #d65032;
+	padding: 20px 15px;
+	border-radius: 15px;
+}
+.rotate_modal, .skew_modal, .translate_modal{
+	background-color: rgba(0,0,0,0.7);
+}
+.buttons__element-hidden{
+	position: relative;
+	margin: 0;
+}
+#add_rotate_selector_btn, #add_skew_selector_btn, #add_translate_selector_btn{
+	padding: 10px 30px;
+	margin: 0;
+	border: 1px solid #d65032;
+	border-radius: 45px;
+	background-color: #292828;
+	color: #d65032;
+}
+#rotate_selector_form, #skew_selector_form, #translate_selector_form{
+	position: absolute;
+	top:-2px;
+	left: 10px;
+}
+#add_rotate_btn, #add_skew_btn, #add_translate_btn{
+	border: 2px solid #d65032;
+	background-color: #292828;
+	color: #d65032;
+	border-radius: 15px;
+	padding: 5px 10px;
+}
+#rotate_moment, #skew_moment, #translate_moment, #rotate_degrees, #skew_degrees, #translate_from, #translate_to{
+	border:2px solid #d65032;
+	border-radius: 15px;
+	padding: 5px 10px;
+}
+input:focus-visible{
+	outline: none;
+}
+.Galery_display{
+	display: flex;
+	flex-wrap: wrap;
+}
